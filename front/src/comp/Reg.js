@@ -28,8 +28,8 @@ const Reg = () => {
         <lable>Email :  <input type='text' placeholder='Enter your id' value={data._id} onChange={adding} name='_id'/></lable>
         <lable>Name :    <input type='text' placeholder='Enter your name' value={data.name} onChange={adding} name='name'/></lable>
         <lable>phno :    <input type='text' placeholder='Enter your phno' value={data.phno} onChange={adding} name='phno'/></lable>
-        <lable>Gender :  <input type='radio'  value="male" onChange={adding} name='gender' checked={data.gender=="male"}/>Male
-        <input type='radio'  value="female" onChange={adding} name='gender' checked={data.gender=="female"}/>Female
+        <lable>Gender :  <input type='radio'  value="male" onChange={adding} name='gender' checked={data.gender=="male"} style={{"margin":"10px"}}/>Male
+        <input type='radio'  value="female" onChange={adding} name='gender' checked={data.gender=="female"} style={{"margin":"10px"}}/>Female
         </lable>
         <lable>password :  <input type='text' placeholder='Enter your Password' value={data.pwd} onChange={adding} name='pwd'/></lable>
 

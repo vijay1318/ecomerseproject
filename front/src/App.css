@@ -18,3 +18,62 @@
   align-items: center;
   border: 2px solid;
 }
+.navmain{
+  height: 10vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+a:hover{
+  color: red;
+}
+.loginmain{
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgb(111, 179, 239);
+  align-items: center;
+
+
+}
+.loginimg img{
+  height: 200px;
+  width: 200px;
+
+}
+.loginform{
+  height: 30%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px solid;
+
+  top: 50%;
+  left: 50%;
+  border: 2px solid rgb(239, 120, 235);
+  /* transform: translate(-50%,-50%); */
+  height: 400px;width: 400px;
+  background: tr;
+            /* background-color: blueviolet; */
+  backdrop-filter: blur(10px);
+}
+.loginform input{
+  height: 30px;
+  width: 200px;
+}
+.loginform button{
+  height: 40px;
+  width: 100px;
+  background-color: aqua;
+  border-radius: 15px;
+}
+

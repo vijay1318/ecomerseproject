@@ -1,13 +1,5 @@
 import React, { createContext } from 'react'
 
-
-const Ct = () => {
-    let obj=createContext(Ct)
-  return (
-    <div>
-      
-    </div>
-  )
-}
+let Ct=createContext()
 
 export default Ct

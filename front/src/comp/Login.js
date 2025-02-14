@@ -33,9 +33,10 @@ console.log(err);
 
   return (
     <div className='loginmain'>
+      <div className='loginimg'><img src='https://tse2.mm.bing.net/th?id=OIP.buSamCN6nOQvpM9rbJGejgHaH0&pid=Api&P=0&h=180' alt='abc'/></div>
       <div className='loginform'>
-        <label>Email : <input type='text' value={data._id} onChange={fun} name='_id'/></label>
-        <label>password : <input type='text' value={data.pwd} onChange={fun} name='pwd'/></label>
+      <label>Email : <input type='text' value={data._id} onChange={fun} name='_id' placeholder='Enter yore id'/></label>
+      <label>password:<input type='text' value={data.pwd} onChange={fun} name='pwd'placeholder='Enter your passsword'/></label>
 
         <button onClick={login}>Login</button>
       </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 import Home from './comp/Home'
 import Nav from './comp/Nav'
@@ -7,28 +7,26 @@ import Reg from './comp/Reg'
 import "./App.css"
 import Ct from './comp/Ct'
 
+
 const App = () => {
     let [state,setstate]=useState({"token":"","_id":"","name":"","pwd":""})
     let updstate=(obj)=>{
         setstate({...state,...obj})
     }
-    let obj={"state":state,"updstate":updstate}
+    let data={"state":state,"updstate":updstate}
   return (
-    <div>
-      <BrowserRouter>
-      <Ct.provider value={obj}>
+      <Ct.Provider value={data}>
+        <BrowserRouter>
       <Nav/>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/reg" element={<Reg/>}/>
       </Routes>
-      </Ct.provider>
       </BrowserRouter>
-    </div>
+      </Ct.Provider>
+    
   )
 }
 
 export default App
-
-
