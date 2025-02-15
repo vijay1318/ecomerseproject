@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 const Login = () => {
 let [data,setdata]=useState({"_id":"","pwd":""})
 let [msg,setmsg]=useState("")
+// let [res,setres]=useState({})
 let obj=useContext(Ct)
 let navigate=useNavigate()
 
@@ -16,18 +17,16 @@ let fun=(e)=>{
 }
 
 let login=()=>{
-  axios.get("http://localhost:5000/login",data).then((res)=>{
+  axios.post("http://localhost:5000/login",data).then((res)=>{
+
     if(res.data.token!=undefined){
       obj.updstate(res.data)
       navigate("/")
     }
     else{
-    console.log("eoor");
+     setmsg(res.data.msg)
     
     }
-  }).catch((err)=>{
-console.log(err);
-
   })
 }
 
@@ -35,6 +34,7 @@ console.log(err);
     <div className='loginmain'>
       <div className='loginimg'><img src='https://tse2.mm.bing.net/th?id=OIP.buSamCN6nOQvpM9rbJGejgHaH0&pid=Api&P=0&h=180' alt='abc'/></div>
       <div className='loginform'>
+        <div>{msg}</div>
       <label>Email : <input type='text' value={data._id} onChange={fun} name='_id' placeholder='Enter yore id'/></label>
       <label>password:<input type='text' value={data.pwd} onChange={fun} name='pwd'placeholder='Enter your passsword'/></label>
 
