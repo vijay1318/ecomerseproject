@@ -7,13 +7,12 @@ const Nav = () => {
   return (
     <div className='navmain'>
       
-      <Link to="/"><img src='./product.png' alt='abc' style={{"height":"20px","width":"20px"}}/></Link>
-    {obj.state.token===""&& <Link to="/login">Login</Link>}
-    {obj.state.token===""&& <Link to="/reg">Reg</Link>}
-      
-      {obj.state.token!==""&&<Link to="/cart">Cart</Link>}
-      {obj.state.role==="admin"&&<Link to="/addpro">Add product</Link>}
-      {obj.state.token!==""&& <Link to="/logout">Logout</Link>}
+      <Link to="/"><img src='./product.png' alt='abc' /></Link>
+        {obj.state.token===""&& <Link to="/login">Login</Link>}
+        {obj.state.token===""&& <Link to="/reg">Reg</Link>}
+        {obj.state.token!==""&&<Link to="/cart">Cart</Link>}
+        {obj.state.role==="admin"&&<Link to="/addpro">Add product</Link>}
+        {obj.state.token!==""&& <Link to="/logout">Logout</Link>}
 
     </div>
   )

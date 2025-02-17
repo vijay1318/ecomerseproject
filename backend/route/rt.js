@@ -1,9 +1,12 @@
 let express=require("express")
 const { userdata, userlogin } = require("../control/contor")
 const { addproduct, getproducts, upload } = require("../control/productcontrol")
+const {addcart, getcart} = require("../control/cartcontrol")
 let route=new express.Router()
 route.post("/reg",userdata)
 route.post("/login",userlogin)
 route.post("/addproduct",upload.single("image"),addproduct)
 route.get("/getproduct",getproducts)
+route.post("/addcart",addcart)
+route.get("/getcart",getcart)
 module.exports=route

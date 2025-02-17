@@ -32,7 +32,7 @@ let login=()=>{
 
   return (
     <div className='loginmain'>
-      <div className='loginimg'><img src='https://tse2.mm.bing.net/th?id=OIP.buSamCN6nOQvpM9rbJGejgHaH0&pid=Api&P=0&h=180' alt='abc'/></div>
+      {/* <div className='loginimg'><img src='https://tse2.mm.bing.net/th?id=OIP.buSamCN6nOQvpM9rbJGejgHaH0&pid=Api&P=0&h=180' alt='abc'/></div> */}
       <div className='loginform'>
         <div>{msg}</div>
       <label>Email : <input type='text' value={data._id} onChange={fun} name='_id' placeholder='Enter yore id'/></label>
