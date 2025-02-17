@@ -5,17 +5,19 @@ import Card from './Card'
 const Home = () => {
     let [data,sedata]=useState([])
     useEffect(()=>{
-        axios.get("https://fakestoreapi.com/products").then((res)=>{
+        axios.get("http://localhost:5000/getproduct").then((res)=>{
         sedata(res.data)
             
         })
-    })
+    },[])
   return (
-    <div>
+    <div className='home'>
       {
         data.map((item)=>{
             return(
+             
                 <Card obj={item}/>
+                
             )
         })
       }
@@ -24,3 +26,4 @@ const Home = () => {
 }
 
 export default Home
+// https://fakestoreapi.com/products

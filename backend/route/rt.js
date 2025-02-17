@@ -1,6 +1,9 @@
 let express=require("express")
 const { userdata, userlogin } = require("../control/contor")
+const { addproduct, getproducts, upload } = require("../control/productcontrol")
 let route=new express.Router()
 route.post("/reg",userdata)
-route.get("/login",userlogin)
+route.post("/login",userlogin)
+route.post("/addproduct",upload.single("image"),addproduct)
+route.get("/getproduct",getproducts)
 module.exports=route

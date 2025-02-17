@@ -36,7 +36,7 @@ let userlogin=async(req,res)=>{
             res.json({"msg":"check email"})
         }
     }catch(err){
-        res.json({"msg":"error in login"})
+        res.json({"msg":err})
     }
 }
 module.exports={userdata,userlogin}

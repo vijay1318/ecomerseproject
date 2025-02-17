@@ -6,10 +6,13 @@ import Login from './comp/Login'
 import Reg from './comp/Reg'
 import "./App.css"
 import Ct from './comp/Ct'
+import Logout from './comp/Logout'
+import Cart from './comp/Cart'
+import Addpro from './comp/Addpro'
 
 
 const App = () => {
-    let [state,setstate]=useState({"token":"","_id":"","name":"","pwd":""})
+    let [state,setstate]=useState({"token":"","_id":"","name":"","role":""})
     let updstate=(obj)=>{
         setstate({...state,...obj})
     }
@@ -22,6 +25,9 @@ const App = () => {
         <Route path="/" element={<Home/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/reg" element={<Reg/>}/>
+        <Route path="/logout" element={<Logout/>}/>
+        <Route path="/cart" element={<Cart/>}/>
+        <Route path="/addpro" element={<Addpro/>}/>
       </Routes>
       </BrowserRouter>
       </Ct.Provider>

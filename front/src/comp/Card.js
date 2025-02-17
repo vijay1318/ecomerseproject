@@ -1,26 +1,27 @@
-// import React from 'react'
 
-// const Card = (props) => {
-//     let data=props.obj
-//   return ( 
-//     <div className='card'>
-//       <img src={data.image} alt='abc'  />
-//       <div className='cardcom'>
-//       <p><b>Name:</b>{data.title}</p>
-//         <p><b>Price:</b>{data.price}</p>
-//         <p><b>Category:</b>{data.category}</p>
-//       </div>
-//     </div>
-//   )
-// }
+import React, { useContext } from 'react'
+import Ct from './Ct'
 
-// export default Card
+const Card = (props) => {
+  let item=props.obj
 
-import React from 'react'
-
-const Card = () => {
+  let obj=useContext(Ct)
   return (
-    <div>
+    <div className='card'>
+      <div className='cardimg'>
+        <img src={`http://localhost:5000/images/${item.image}`} alt='abc'/>
+      </div>
+      <div className='subcard'>
+        <h5>{item.title}</h5>
+        <p>Price:{item.price}</p>
+        <p>Category:{item._id}</p> 
+      </div>
+       <div className='butt'>
+        <button className='btn btn-primary'>Know more...</button>
+        {obj.state.token!=="" &&<button className='btn btn-info'>Add Cart</button>}
+        {obj.state.token!=="" && obj.state.role==="admin"&&<button className='btn btn-info'>Edit</button>}
+        {obj.state.token!=="" && obj.state.role==="admin"&&<button className='btn btn-danger'>Delete</button>}
+        </div>
       
     </div>
   )
